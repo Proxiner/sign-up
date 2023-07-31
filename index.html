@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+
+    <form>
+
+        <div class="username">
+            <label for="fullname">username : </label>
+            <input type="text" name="fullname" id="fullname">
+        </div>
+
+        <div class="email">
+            <label for="email">email :</label>
+            <input type="email" name="email" id="email">
+        </div>
+
+
+        <div class="password">
+            <label for="password">password :</label>
+            <input type="password" name="password" id="password">
+            <img src="image/eye.png" alt="show password">
+        </div>
+
+        <div class="confirm-password">
+            <label for="confirm-password">confirm password :</label>
+            <input type="password" name="confirm-password" id="confirm-password">
+            <img src="image/eye.png" alt="show password">
+        </div>
+
+        <input type="submit" class="submit" value="sign up" onclick="signUp()">
+
+    </form>
+
+</div>
+
+<script src="localstorage.js"></script>
+
+</body>
+</html>
