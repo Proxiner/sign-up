@@ -1,13 +1,16 @@
-function myFunction() {
+function signUp(e) {
+
+    e.preventDefault();
+
     const information = {
         fullname : document.querySelector("#fullname"),
         email : document.querySelector("#email"),
         password : document.querySelector("#password"),
-        confirmpassword : document.querySelector("#confirmpassword")
+        confirmpassword : document.querySelector("#confirmPassword")
     }
     let result;
     if (information.fullname == "") {
-        alert("please enter your username")
+        result = "please enter your username"
     } else if (information.email == "") {
         result = "please enter your email"
     } else if (information.password == "") {
@@ -22,7 +25,7 @@ function myFunction() {
         result = "please enter your information"
         console.log(demo)
     }
-    document.getElementById("demo").alert = result;
+    document.getElementById("demo").innerHTML = result;
 }
 
 const passField = document.querySelector("#password"),
