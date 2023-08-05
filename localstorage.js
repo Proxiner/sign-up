@@ -1,6 +1,6 @@
-function signUp(e) {
+function signUp(event) {
 
-    e.preventDefault();
+    event.preventDefault();
 
     const information = {
         fullname : document.querySelector("#fullname"),
@@ -8,7 +8,9 @@ function signUp(e) {
         password : document.querySelector("#password"),
         confirmpassword : document.querySelector("#confirmPassword")
     }
+
     let result;
+    
     if (information.fullname == "") {
         result = "please enter your username"
     } else if (information.email == "") {
@@ -27,6 +29,8 @@ function signUp(e) {
     }
     document.getElementById("demo").innerHTML = result;
 }
+
+document.querySelector("form").addEventListener("submit", signUp);
 
 const passField = document.querySelector("#password"),
   showBtn = document.querySelector("#eye1");
