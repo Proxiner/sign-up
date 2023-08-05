@@ -11,20 +11,20 @@ function signUp(event) {
 
     let result;
     
-    if (information.fullname == "") {
+    if (information.fullname.value === "") {
         result = "please enter your username"
-    } else if (information.email == "") {
+    } else if (information.email.value == "") {
         result = "please enter your email"
-    } else if (information.password == "") {
+    } else if (information.password.value == "") {
         result = "please enter your password"
     } else if (information.password.length > 8) {
         result = "Your password should be more than 8 character"
     } else if (information.confirmpassword == "") {
         result = "please enter your confirmpassword"
-    } else if (information.confirmpassword.length === information.password.length) {
+    } else if (information.confirmpassword.value !== information.password.value) {
         result = "The passwords do not match"
     } else {
-        result = "please enter your information"
+        result = "Thanks for your Signup"
         console.log(demo)
     }
     document.getElementById("demo").innerHTML = result;
@@ -46,7 +46,7 @@ showBtn.addEventListener('click', () => {
 });
 
 
-const passField2 = document.querySelector("#confirm-password"),
+const passField2 = document.querySelector("#confirmPassword"),
   showBtn2 = document.querySelector("#eye2");
 
 showBtn2.addEventListener('click', () => {
