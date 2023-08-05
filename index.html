@@ -7,38 +7,41 @@
     <link rel="stylesheet" href="./css/main.min.css">
 </head>
 <body>
-    <div class="form-container">
 
-    <form>
+    <section class="contanier-of-form-container">
+        <div class="form-container">
 
-        <div class="username">
-            <label for="fullname">username : </label>
-            <input type="text" name="fullname" id="fullname">
+            <form onsubmit="signUp(event)">
+        
+                <div class="username">
+                    <label for="fullname">username : </label>
+                    <input type="text" name="fullname" id="fullname">
+                </div>
+        
+                <div class="email">
+                    <label for="email">email :</label>
+                    <input type="email" name="email" id="email">
+                </div>
+        
+        
+                <div class="password">
+                    <label for="password">password :</label>
+                    <input type="password" name="password" id="password">
+                    <img src="image/eye.png" alt="show password" class="show-eye">
+                </div>
+        
+                <div class="confirm-password">
+                    <label for="confirm-password">confirm password :</label>
+                    <input type="password" name="confirm-password" id="confirm-password">
+                    <img src="image/eye.png" alt="show password" class="show-eye">
+                </div>
+        
+                <input type="submit" class="submit" value="sign up" " >
+        
+            </form>
+        
         </div>
-
-        <div class="email">
-            <label for="email">email :</label>
-            <input type="email" name="email" id="email">
-        </div>
-
-
-        <div class="password">
-            <label for="password">password :</label>
-            <input type="password" name="password" id="password">
-            <img src="image/eye.png" alt="show password">
-        </div>
-
-        <div class="confirm-password">
-            <label for="confirm-password">confirm password :</label>
-            <input type="password" name="confirm-password" id="confirm-password">
-            <img src="image/eye.png" alt="show password">
-        </div>
-
-        <input type="submit" class="submit" value="sign up" onclick="signUp()">
-
-    </form>
-
-</div>
+    </section>
 
 <script src="localstorage.js"></script>
 
