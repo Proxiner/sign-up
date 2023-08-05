@@ -2,24 +2,59 @@ function signUp(event) {
 
     event.preventDefault();
 
-    let fullname = document.getElementById("fullname");
-    let email = document.getElementById("email");
-    let password = document.getElementById("password");
-    let confirm_password = document.getElementById("confirm-password");
-
-    if (fullname === ""){
-        alert("please full your fullname")
-    } else if (email === ""){
-        alert("please full your email")
-    } else if (password === ""){
-        alert("please full your password")
-    } else if (confirm_password === ""){
-        alert("please enter your password")
-    }else if (password.length >= 8){  
-        alert(`your password lower than 8`) 
-    }else if (confirm_password !== password){  
-        alert(`your confirm password isn't true`) 
-    }else {
-        alert("your information set in sass servers")
+    const information = {
+        fullname : document.querySelector("#fullname"),
+        email : document.querySelector("#email"),
+        password : document.querySelector("#password"),
+        confirmpassword : document.querySelector("#confirmPassword")
     }
+
+    let result;
+    
+    if (information.fullname.value === "") {
+        result = "please enter your username"
+    } else if (information.email.value == "") {
+        result = "please enter your email"
+    } else if (information.password.value == "") {
+        result = "please enter your password"
+    } else if (information.password.length > 8) {
+        result = "Your password should be more than 8 character"
+    } else if (information.confirmpassword == "") {
+        result = "please enter your confirmpassword"
+    } else if (information.confirmpassword.value !== information.password.value) {
+        result = "The passwords do not match"
+    } else {
+        result = "Thanks for your Signup"
+        console.log(demo)
+    }
+    document.getElementById("demo").innerHTML = result;
 }
+
+document.querySelector("form").addEventListener("submit", signUp);
+
+const passField = document.querySelector("#password"),
+  showBtn = document.querySelector("#eye1");
+
+showBtn.addEventListener('click', () => {
+  if (passField.type === 'password') {
+    passField.type = 'text';
+    showBtn.classList.add('hide');
+  } else {
+    passField.type = 'password';
+    showBtn.classList.remove('hide');
+  }
+});
+
+
+const passField2 = document.querySelector("#confirmPassword"),
+  showBtn2 = document.querySelector("#eye2");
+
+showBtn2.addEventListener('click', () => {
+  if (passField2.type === 'password') {
+    passField2.type = 'text';
+    showBtn2.classList.add('hide');
+  } else {
+    passField2.type = 'password';
+    showBtn2.classList.remove('hide');
+  }
+});
