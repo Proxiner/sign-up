@@ -1,0 +1,9 @@
+@use './fonts';
+
+$main-color : #CD6799;
+$text-color : #222222;
+
+.colorize {
+    color : $main-color;
+    font-weight: fonts.$bold;
+}
