@@ -1,4 +1,4 @@
-function signUp(event) {
+function signUp (event) {
 
     event.preventDefault();
 
@@ -33,7 +33,7 @@ function signUp(event) {
 document.querySelector("form").addEventListener("submit", signUp);
 
 const passField = document.querySelector("#password"),
-  showBtn = document.querySelector("#eye1");
+showBtn = document.querySelector("#eye1");
 
 showBtn.addEventListener('click', () => {
   if (passField.type === 'password') {
@@ -44,7 +44,6 @@ showBtn.addEventListener('click', () => {
     showBtn.classList.remove('hide');
   }
 });
-
 
 const passField2 = document.querySelector("#confirmPassword"),
   showBtn2 = document.querySelector("#eye2");
