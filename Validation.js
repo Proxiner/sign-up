@@ -58,3 +58,5 @@ showBtn2.addEventListener('click', () => {
     showBtn2.classList.remove('hide');
   }
 });
+
+export {information}
