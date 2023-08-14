@@ -1,31 +1,33 @@
-function signUp(event) {
+import { savedata } from "./localstorage.js";
+let form = document.querySelector("#inputList");
+form.addEventListener("onsubmit",signUp);
 
-    event.preventDefault();
+function signUp() {
 
-    const information = {
-        fullname : document.querySelector("#fullname"),
-        email : document.querySelector("#email"),
-        password : document.querySelector("#password"),
-        confirmpassword : document.querySelector("#confirmPassword")
-    }
+      let fullname = document.querySelector("#fullname").value;
+      let email = document.querySelector("#email").value;
+      let password = document.querySelector("#password").value;
+      let confirmpassword = document.querySelector("#confirmPassword").value;
+
 
     let result;
     
-    if (information.fullname.value === "") {
+    if (fullname === "") {
         result = "please enter your username"
-    } else if (information.email.value == "") {
+    } else if (email == "") {
         result = "please enter your email"
-    } else if (information.password.value == "") {
+    } else if (password == "") {
         result = "please enter your password"
-    } else if (information.password.length > 8) {
+    } else if (passwordlength > 8) {
         result = "Your password should be more than 8 character"
-    } else if (information.confirmpassword == "") {
+    } else if (confirmpassword == "") {
         result = "please enter your confirmpassword"
-    } else if (information.confirmpassword.value !== information.password.value) {
+    } else if (confirmpassword !== password) {
         result = "The passwords do not match"
     } else {
         result = "Thanks for your Signup"
         console.log(demo)
+        savedata("fullname",fullname)
     }
     document.getElementById("demo").innerHTML = result;
 }
@@ -58,5 +60,3 @@ showBtn2.addEventListener('click', () => {
     showBtn2.classList.remove('hide');
   }
 });
-
-export {information}

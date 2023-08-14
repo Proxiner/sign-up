@@ -9,7 +9,7 @@
 <body>
     <div class="form-container">
 
-    <form onsubmit="signUp(event)">
+    <form id="inputList">
 
         <div class="username">
             <label for="fullname">username : </label>
@@ -36,14 +36,13 @@
 
         <p id="demo"></p>
 
-        <input type="submit" class="submit" value="sign up" onclick="signUp()">
+        <input type="submit" class="submit" value="sign up" >
 
     </form>
 
 </div>
 
-<script src="Validation.js"></script>
-<script src="localStorage.js"></script>
+<script type="module" src="Validation.js"></script>
 
 </body>
 </html>
