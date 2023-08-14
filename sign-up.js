@@ -1,3 +1,5 @@
+import {localstorage} from "./localstorage.js";
+
 function signUp(event) {
 
     event.preventDefault();
@@ -20,7 +22,7 @@ function signUp(event) {
     }else if (confirm_password !== password){  
         alert(`your confirm password isn't true`) 
     }else {
-        alert("your information set in sass servers")
+      localstorage(`fullname`, fullname)
     }
 }
 
@@ -46,3 +48,6 @@ showBtn2.addEventListener('click', () => {
     confirm_password.type = "password"
   }
 })
+
+let form = document.getElementById("form");
+form.addEventListener("onsubmit" , signUp)

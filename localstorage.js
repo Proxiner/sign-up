@@ -1,12 +1,8 @@
-function signUp(event) {
+export function localstorage(key ,value) {
 
-    event.preventDefault();
+    // event.preventDefault();
+    
   
-    let fullname = document.getElementById("fullname").value;
-    let email = document.getElementById("email").value;
-    let password = document.getElementById("password").value;
-  
-        localStorage.setItem(`fullname` , `${fullname}`)
-        localStorage.setItem(`email` , `${email}`)
-        localStorage.setItem(`password` , `${password}`)
+
+        localStorage.setItem(key , value)
   }
